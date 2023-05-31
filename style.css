@@ -1,8 +1,6 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    max-width: 100%;
-    max-height: 100%;
 }
 .fundo {
     padding: 15px 60px 0 60px;
@@ -13,7 +11,7 @@
     position: absolute;
     transform: translate(-50%);
     width: 100%;
-    background-image: url("../imagens/lycg-xl.jpg");
+    background-image: url("imagens/lycg-xl.jpg");
     background-size: cover;
     z-index: -1;
 }
@@ -30,12 +28,40 @@
     display: flex;
     align-items: center;
     gap: 5%;
+    position: relative;
 }
 .a-links {
     display: flex;
+    padding: 5px 0;
     color: #053361;
     text-decoration: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.link-dropdown{
+    display: none;
+    position: absolute;
+    right: -70px;
+    top: 30px;
+    background-color: white;
+    border-radius: 10px;
+    width: 180px;
+    z-index: 1;
+}
+.link-dropdown .list{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    gap: 10px;
+    width: 100%;
+}
+.link-dropdown .list .link-item{
+    padding: 8px 15px;
+    cursor: pointer;
+    width: 100%;
+}
+.link-dropdown .list .link-item:hover{
+    background-color: antiquewhite;
 }
 #icon-seta {
     position: relative;
