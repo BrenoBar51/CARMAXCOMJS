@@ -89,7 +89,33 @@
                 <h2 id="h2-alert2">$20,791</h2>
                 <button id="btn-insert">GET PRE-QUALIFIELD</button>
             </div>
-        </div>    
+        </div>
+        <section class="content">
+            <form class="formulario" id="form">
+                <h2 class="title">Get a real offer in minutes</h2>
+                <p class="text">Most cars qualify, some we'll ask to see in person.</p>
+                <div class="btns">
+                    <button class="btn selected">LICENSE PLATE</button>
+                    <button class="btn">VIN</button>
+                </div>
+                <label class="label-form" for="license">License plate number</label>
+                <input class="input-form" name="license" id="license" type="text">
+                <span class="invalid" id="invalid-license">Campo inválido</span>
+                <label class="label-form" for="state">
+                    Where's your car registered?
+                </label>
+                <select class="input-form" name="state" id="state">
+                    <option selected disabled></option>
+                    <option value="ce">Ceará</option>
+                    <option value="ma" disabled>Maranhão</option>
+                    <option value="sp">São Paulo</option>
+                </select>
+                <span class="invalid" id="invalid-state">Campo inválido</span>
+                <label class="label-form" for="zip">What's your zip code?</label>
+                <input class="input-form" type="text" id="zip" name="zip">
+                <button id="btn-send" disabled class="btn-send">Get my offer</button>
+            </form>
+        </section>    
     </main>
     <script  type = "module"  src ="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
