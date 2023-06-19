@@ -63,11 +63,28 @@ function validBtnSubmit() {
     }
 }
 
-function OnClickBtn(){
-    console.log('clicou')
-    btns.style.color = '#1773cf'
-}
-
 license.addEventListener('change', validLicenseInput)
 state.addEventListener('change', validStateInput)
-btns.addEventListener('click', OnClickBtn)
+
+// Alteração dos campos do formulário
+
+const btnLicense = document.getElementById('btn-license')
+const btnVin = document.getElementById('btn-vin')
+const vinFields = document.getElementById('vin-fields')
+const licenseFields = document.getElementById('license-fields')
+
+btnVin.addEventListener('click', (event) =>{
+    event.preventDefault()
+    btnLicense.setAttribute("class", "btn")
+    btnVin.classList.add("selected")
+    vinFields.classList.remove('hidden')
+    licenseFields.classList.add('hidden')
+})
+
+btnLicense.addEventListener('click', (e) =>{
+    e.preventDefault()
+    btnVin.classList.remove('selected')
+    btnLicense.classList.add('selected')
+    vinFields.classList.add('hidden')
+    licenseFields.classList.remove('hidden')
+})
